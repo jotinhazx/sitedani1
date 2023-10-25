@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição na Next Academy</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.im.ge/2023/10/25/txF126.Post-Instagram-Dia-da-Informatica-Moderno-Preto-3.png');            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #2c3e50; 
+            color: #ecf0f1; 
+        }
+
+        form {
+            background-color: #ffffff; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #000000; 
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: red; 
+            color: #ffffff; 
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c0392b; 
+        }
+
+        .success-message {
+            display: none;
+            background-color: #ffffff;
+            border: 1px solid #000000; 
+            color: #000000;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        label, textarea {
+            color: #000000; 
+        }
+
+        a {
+            color: #ecf0f1; 
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="inscriptionForm">
+        <h1>Inscrição na Next Academy</h1>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <input type="submit" value="Enviar Inscrição">
+        
+        <a href="index.html">Voltar para a página principal</a>
+        
+        <div id="successMessage" class="success-message">Inscrição feita com sucesso! Aguarde 24 horas.</div>
+    </form>
+
+    <script>
+        document.getElementById('inscriptionForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            showSuccessMessage();
+        });
+
+        function showSuccessMessage() {
+            var successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+            }, 5000); 
+        }
+    </script>
+</body>
+</html>
